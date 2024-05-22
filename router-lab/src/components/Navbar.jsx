@@ -1,16 +1,18 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', backgroundColor: '#333', color: 'white' }}>
-      <Link to="/" style={{ textDecoration: 'none', color: 'white', fontSize: '24px' }}>Kavlium ❤️</Link>
-      <div>
-        <Link to="/contacts" style={{ margin: '0 1rem', textDecoration: 'none', color: 'white' }}>Contacts</Link>
-        <Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>About</Link>
-      </div>
-    </nav>
+    <header className="header">
+      <Link to="/" className="header-link" style={{ fontSize: '24px' }}>Kavlium ❤️</Link>
+      <nav>
+        <Link to="/home" className="header-link">Home</Link>
+        <Link to="/contacts" className="header-link" style={{ margin: '0 1rem' }}>Contacts</Link>
+        <Link to="/about" className="header-link">About</Link>
+      </nav>
+    </header>
   );
 };
 
